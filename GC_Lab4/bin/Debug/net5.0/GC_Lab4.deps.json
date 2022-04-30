@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "GC_Lab4/1.0.0": {
+        "runtime": {
+          "GC_Lab4.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "GC_Lab4/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

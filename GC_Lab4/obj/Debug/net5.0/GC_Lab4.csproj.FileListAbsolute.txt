@@ -1,0 +1,16 @@
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\bin\Debug\net5.0\GC_Lab4.exe
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\bin\Debug\net5.0\GC_Lab4.deps.json
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\bin\Debug\net5.0\GC_Lab4.runtimeconfig.json
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\bin\Debug\net5.0\GC_Lab4.runtimeconfig.dev.json
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\bin\Debug\net5.0\GC_Lab4.dll
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\bin\Debug\net5.0\GC_Lab4.pdb
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\GC_Lab4.csproj.AssemblyReference.cache
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\GC_Lab4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\GC_Lab4.AssemblyInfoInputs.cache
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\GC_Lab4.AssemblyInfo.cs
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\GC_Lab4.csproj.CoreCompileInputs.cache
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\GC_Lab4.dll
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\refint\GC_Lab4.dll
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\GC_Lab4.pdb
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\GC_Lab4.genruntimeconfig.cache
+C:\Users\Christ\Documents\GC\repos\GC_Lab4\GC_Lab4\obj\Debug\net5.0\ref\GC_Lab4.dll

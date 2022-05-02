@@ -1,7 +1,4 @@
-﻿// you shouldn't have to repeat quewstions and stuff every possible number choice
-// linking together
-
-using System;
+﻿using System;
 
 namespace GC_Lab4
 {

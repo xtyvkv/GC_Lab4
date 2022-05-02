@@ -1,4 +1,7 @@
-﻿using System;
+﻿// TO DO
+// - Deal with invalid iput
+
+using System;
 
 namespace GC_Lab4
 {

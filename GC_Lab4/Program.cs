@@ -1,5 +1,4 @@
 ﻿// you shouldn't have to repeat quewstions and stuff every possible number choice
-// better way to write out array?
 // linking together
 
 using System;
@@ -10,43 +9,61 @@ namespace GC_Lab4
     {
         static void Main(string[] args)
         {
-            string[] studentNames = new string[5];
-            studentNames[0] = "Pamela";
-            studentNames[1] = "Gordo";
-            studentNames[2] = "Chelsea";
-            studentNames[3] = "Craig";
-            studentNames[4] = "Sasha";
+            // Student data
+            string[] studentNames = new string[5]
+            {
+                "Pamela",
+                "Gordo",
+                "Chelsea",
+                "Craig",
+                "Sasha"
+            };
 
-            string[] studentTowns = new string[5];
-            studentTowns[0] = "Columbus, OH";
-            studentTowns[1] = "Denver, CO";
-            studentTowns[2] = "Detroit, MI";
-            studentTowns[3] = "Toledo, OH";
-            studentTowns[4] = "Tampa, FL";
+            string[] studentTowns = new string[5]
+            {
+                "Columbus, OH",
+                "Denver, CO",
+                "Detroit, MI",
+                "Toledo, OH",
+                "Tampa, FL",
+            };
+            
 
-            string[] studentFood = new string[5];
-            studentFood[0] = "Cheese";
-            studentFood[1] = "Cereal";
-            studentFood[2] = "Pizza";
-            studentFood[3] = "Chicken Alfredo";
-            studentFood[4] = "Soylent";
+            string[] studentFoods = new string[5]
+            {
+                "Cheese",
+                "Cereal",
+                "Pizza",
+                "Chicken Alfredo",
+                "Soylent"
+            };
 
+            // Print student list
             Console.WriteLine("Here are all of my students. Pick one by entering their number.");
             for (int i = 0; i < studentNames.Length; i++)
             {
                 Console.WriteLine($"{i + 1}. {studentNames[i]}");
             }
-            var userChoice = int.Parse(Console.ReadLine());
-            if (userChoice == 1)
+
+            // Select student
+            var studentChoice = int.Parse(Console.ReadLine());
+            Console.WriteLine($"You chose {studentNames[studentChoice - 1]}");
+
+            // Select category
+            Console.WriteLine("Display Hometown or Favorite Food?");
+            var categoryChoice = Console.ReadLine();
+
+            // Output student info
+            if (categoryChoice.Equals("Hometown", StringComparison.OrdinalIgnoreCase))
             {
-                Console.WriteLine(studentNames[0]);
-                Console.WriteLine("Display Hometown or Favorite Food?");
-                var userCatagoryChoice = Console.ReadLine();
-                if (userCatagoryChoice == "Hometown")
-                {
-                    Console.WriteLine($"{studentTowns[userChoice - 1]}");
-                }
+                Console.WriteLine($"{studentTowns[studentChoice - 1]}");
             }
+            else if (categoryChoice.Equals("Favorite Food", StringComparison.OrdinalIgnoreCase))
+            {
+                Console.WriteLine($"{studentFoods[studentChoice - 1]}");
+            }
+            else
+                Console.WriteLine("Invalid input.");
             Console.WriteLine("Bye!");
         }
     }

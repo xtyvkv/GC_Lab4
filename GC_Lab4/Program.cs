@@ -31,11 +31,17 @@ namespace GC_Lab4
 
             string[] studentFoods = new string[5]
             {
-                "Cheese",
-                "Cereal",
-                "Pizza",
-                "Chicken Alfredo",
+                "cheese",
+                "cereal",
+                "pizza",
+                "chicken alfredo",
                 "Soylent"
+            };
+
+            string[] studentCategories = new string[2]
+            {
+                "Hometown",
+                "Favorite Food"
             };
 
             // Print student list
@@ -47,24 +53,38 @@ namespace GC_Lab4
 
             // Select student
             var studentChoice = int.Parse(Console.ReadLine());
-            Console.WriteLine($"You chose {studentNames[studentChoice - 1]}");
 
-            // Select category
-            Console.WriteLine("Display Hometown or Favorite Food?");
-            var categoryChoice = Console.ReadLine();
-
+            // Print categories
+            Console.WriteLine();
+            Console.WriteLine($"What would you like to know about {studentNames[studentChoice - 1]}?");
+            for (int i = 0; i < studentCategories.Length; i++)
+            {
+                Console.WriteLine($"{i + 1}. {studentCategories[i]}");
+            }
+            var categoryChoice = int.Parse(Console.ReadLine());
+            
             // Output student info
-            if (categoryChoice.Equals("Hometown", StringComparison.OrdinalIgnoreCase))
+            if (categoryChoice == 1)
             {
-                Console.WriteLine($"{studentTowns[studentChoice - 1]}");
+                Console.WriteLine();
+                Console.WriteLine($"{studentNames[studentChoice - 1]}'s {studentCategories[categoryChoice - 1].ToLower()} is {studentTowns[studentChoice - 1]}.");
             }
-            else if (categoryChoice.Equals("Favorite Food", StringComparison.OrdinalIgnoreCase))
+            else if (categoryChoice == 2)
             {
-                Console.WriteLine($"{studentFoods[studentChoice - 1]}");
+                Console.WriteLine();
+                Console.WriteLine($"{studentNames[studentChoice - 1]}'s {studentCategories[categoryChoice - 1].ToLower()} is {studentFoods[studentChoice - 1]}.");
             }
-            else
-                Console.WriteLine("Invalid input.");
-            Console.WriteLine("Bye!");
+            Console.WriteLine();
+            Console.WriteLine("Goodbye!");
+
+            // Probably not possible, but setting this aside to try again later. Would be cool if I could do this in one string.
+                /*
+                // Select category
+                var categoryChoice = int.Parse(Console.ReadLine());
+
+                // Output student info
+                Console.WriteLine($"{studentNames[studentChoice - 1]}'s {studentCategories[categoryChoice - 1]} is ???");
+                */
         }
     }
 }

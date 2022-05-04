@@ -108,6 +108,7 @@ namespace GC_Lab4
                 Console.WriteLine();
                 Console.WriteLine("Would you like to learn about another student (y/n)?");
                 string userWillGoAgain = Console.ReadLine();
+                // try to use ignore case instead of to lower
                 if (userWillGoAgain.ToLower() == "y")
                 {
                     Console.WriteLine();

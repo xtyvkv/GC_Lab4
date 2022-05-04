@@ -1,6 +1,5 @@
 ﻿// TO DO
-// - Deal with invalid iput
-// Need separate while loops for each instance of invalid input?
+// - Deal with invalid iput (input that won't convert to int)
 
 using System;
 
@@ -41,48 +40,52 @@ namespace GC_Lab4
                 "Soylent"
             };
 
+
             string[] studentCategories = new string[2]
             {
-                "Hometown",
-                "Favorite Food"
+                "hometown",
+                "favorite food"
             };
 
             while (goAgain)
             {
-                // Print student list
-                Console.WriteLine("Here are all of my students. Pick one by entering their number.");
-                for (int i = 0; i < studentNames.Length; i++)
-                {
-                    Console.WriteLine($"{i + 1}. {studentNames[i]}");
-                }
-
-                // Select student
+                // Ask for student number
+                Console.WriteLine("Please enter a student number. If you would like to see the student directory please enter \"099\".");
                 var studentChoice = int.Parse(Console.ReadLine());
-
-                // Print categories
-                Console.WriteLine();
-                Console.WriteLine($"What would you like to know about {studentNames[studentChoice - 1]}?");
-                for (int i = 0; i < studentCategories.Length; i++)
+                if (studentChoice == 099)
                 {
-                    Console.WriteLine($"{i + 1}. {studentCategories[i]}");
-                }
-                var categoryChoice = int.Parse(Console.ReadLine());
-
-                // Output student info
-                if (categoryChoice == 1)
-                {
+                    for (int i = 0; i < studentNames.Length; i++)
+                    {
+                        Console.WriteLine($"{i + 1}. {studentNames[i]}");
+                    }
                     Console.WriteLine();
-                    Console.WriteLine($"{studentNames[studentChoice - 1]}'s {studentCategories[categoryChoice - 1].ToLower()} is {studentTowns[studentChoice - 1]}.");
+                    continue;
                 }
-                else if (categoryChoice == 2)
+                else if (studentChoice < 1 || studentChoice > studentNames.Length)
+                    Console.WriteLine("There is no student associated with that number.");
+                else
                 {
+                    // Print categories
                     Console.WriteLine();
-                    Console.WriteLine($"{studentNames[studentChoice - 1]}'s {studentCategories[categoryChoice - 1].ToLower()} is {studentFoods[studentChoice - 1]}.");
+                    Console.WriteLine($"Student {studentChoice} is {studentNames[studentChoice - 1]}. What would you like to know? Enter \"{studentCategories[0]}\" or \"{studentCategories[1]}\".");
+                    var categoryChoice = Console.ReadLine();
+
+                    // Output student info
+                    if (categoryChoice.Equals(studentCategories[0], StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine($"{studentNames[studentChoice - 1]}'s {studentCategories[0]} is {studentTowns[studentChoice - 1]}.");
+                    }
+                    else if (categoryChoice.Equals(studentCategories[1], StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine($"{studentNames[studentChoice - 1]}'s {studentCategories[1]} is {studentFoods[studentChoice - 1]}.");
+                    }
                 }
 
                 // Go again?
                 Console.WriteLine();
-                Console.WriteLine("Would you like to go again (y/n)?");
+                Console.WriteLine("Would you like to learn about another student (y/n)?");
                 string userWillGoAgain = Console.ReadLine();
                 if (userWillGoAgain == "y")
                 {
@@ -98,15 +101,6 @@ namespace GC_Lab4
             }
                 Console.WriteLine();
                 Console.WriteLine("Goodbye!");
-
-                // Probably not possible, but setting this aside to try again later. Would be cool if I could do this in one string.
-                /*
-                // Select category
-                var categoryChoice = int.Parse(Console.ReadLine());
-
-                // Output student info
-                Console.WriteLine($"{studentNames[studentChoice - 1]}'s {studentCategories[categoryChoice - 1]} is ???");
-                */
         }
     }
 }
